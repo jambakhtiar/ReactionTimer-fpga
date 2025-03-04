@@ -1,0 +1,362 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue May 21 11:58:12 2024
+# Process ID: 38349
+# Current directory: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.runs/synth_1
+# Command line: vivado -log Reaction_Timer_System.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Reaction_Timer_System.tcl
+# Log file: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.runs/synth_1/Reaction_Timer_System.vds
+# Journal file: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source Reaction_Timer_System.tcl -notrace
+Command: synth_design -top Reaction_Timer_System -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 38393
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2602.512 ; gain = 0.000 ; free physical = 2473 ; free virtual = 9687
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Reaction_Timer_System' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Reaction_Timer_System.vhd:52]
+INFO: [Synth 8-3491] module 'clock_ms' declared at '/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/clock_ms.vhd:5' bound to instance 'uut1' of component 'clock_ms' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Reaction_Timer_System.vhd:142]
+INFO: [Synth 8-638] synthesizing module 'clock_ms' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/clock_ms.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'clock_ms' (1#1) [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/clock_ms.vhd:13]
+INFO: [Synth 8-3491] module 'clock_1ms_1hz' declared at '/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/clock_1ms_1hz.vhd:4' bound to instance 'uut2' of component 'clock_1ms_1hz' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Reaction_Timer_System.vhd:149]
+INFO: [Synth 8-638] synthesizing module 'clock_1ms_1hz' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/clock_1ms_1hz.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'clock_1ms_1hz' (2#1) [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/clock_1ms_1hz.vhd:12]
+INFO: [Synth 8-3491] module 'keypressed' declared at '/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/keypressed.vhd:6' bound to instance 'uut3_key0' of component 'keypressed' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Reaction_Timer_System.vhd:159]
+INFO: [Synth 8-638] synthesizing module 'keypressed' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/keypressed.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'keypressed' (3#1) [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/keypressed.vhd:15]
+INFO: [Synth 8-3491] module 'keypressed' declared at '/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/keypressed.vhd:6' bound to instance 'uut3_key1' of component 'keypressed' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Reaction_Timer_System.vhd:166]
+INFO: [Synth 8-3491] module 'keypressed' declared at '/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/keypressed.vhd:6' bound to instance 'uut3_key2' of component 'keypressed' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Reaction_Timer_System.vhd:173]
+INFO: [Synth 8-3491] module 'keypressed' declared at '/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/keypressed.vhd:6' bound to instance 'uut3_key3' of component 'keypressed' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Reaction_Timer_System.vhd:180]
+INFO: [Synth 8-3491] module 'controller' declared at '/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:17' bound to instance 'uut4' of component 'controller' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Reaction_Timer_System.vhd:190]
+INFO: [Synth 8-638] synthesizing module 'controller' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:41]
+INFO: [Synth 8-3491] module 'config_fsm' declared at '/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/configuration_fsm.vhd:5' bound to instance 'uut1' of component 'config_fsm' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:127]
+INFO: [Synth 8-638] synthesizing module 'config_fsm' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/configuration_fsm.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'config_fsm' (4#1) [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/configuration_fsm.vhd:17]
+INFO: [Synth 8-3491] module 'random_delay' declared at '/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/random_delay.vhd:5' bound to instance 'uut2' of component 'random_delay' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:138]
+INFO: [Synth 8-638] synthesizing module 'random_delay' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/random_delay.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'random_delay' (5#1) [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/random_delay.vhd:13]
+INFO: [Synth 8-3491] module 'stopwatch_ms' declared at '/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/stopwatch_ms.vhd:5' bound to instance 'spA' of component 'stopwatch_ms' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:147]
+INFO: [Synth 8-638] synthesizing module 'stopwatch_ms' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/stopwatch_ms.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'stopwatch_ms' (6#1) [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/stopwatch_ms.vhd:16]
+INFO: [Synth 8-3491] module 'stopwatch_ms' declared at '/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/stopwatch_ms.vhd:5' bound to instance 'spB' of component 'stopwatch_ms' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:156]
+WARNING: [Synth 8-614] signal 'config_done' is read in the process but is not in the sensitivity list [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:184]
+WARNING: [Synth 8-614] signal 'timer_done' is read in the process but is not in the sensitivity list [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:184]
+WARNING: [Synth 8-614] signal 'sp1_done' is read in the process but is not in the sensitivity list [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:184]
+WARNING: [Synth 8-614] signal 'sp2_done' is read in the process but is not in the sensitivity list [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:184]
+WARNING: [Synth 8-614] signal 'sp1_time_w' is read in the process but is not in the sensitivity list [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:184]
+WARNING: [Synth 8-614] signal 'sp2_time_w' is read in the process but is not in the sensitivity list [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:184]
+WARNING: [Synth 8-614] signal 'test_cycles_reg' is read in the process but is not in the sensitivity list [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:184]
+WARNING: [Synth 8-614] signal 'sp1_time' is read in the process but is not in the sensitivity list [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:184]
+WARNING: [Synth 8-614] signal 'sp2_time' is read in the process but is not in the sensitivity list [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:184]
+WARNING: [Synth 8-614] signal 'score_playerA_reg' is read in the process but is not in the sensitivity list [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:184]
+WARNING: [Synth 8-614] signal 'score_playerB_reg' is read in the process but is not in the sensitivity list [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:184]
+WARNING: [Synth 8-614] signal 'target_score_reg' is read in the process but is not in the sensitivity list [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:184]
+WARNING: [Synth 8-614] signal 'sec_done' is read in the process but is not in the sensitivity list [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:184]
+WARNING: [Synth 8-614] signal 'sec5_done' is read in the process but is not in the sensitivity list [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:184]
+WARNING: [Synth 8-614] signal 'sec_en' is read in the process but is not in the sensitivity list [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:337]
+WARNING: [Synth 8-614] signal 'sec_count' is read in the process but is not in the sensitivity list [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:337]
+INFO: [Synth 8-256] done synthesizing module 'controller' (7#1) [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:41]
+INFO: [Synth 8-3491] module 'Bin_to_BCD' declared at '/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Bin_to_BCD.vhd:5' bound to instance 'uut5_target_Score' of component 'Bin_to_BCD' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Reaction_Timer_System.vhd:210]
+INFO: [Synth 8-638] synthesizing module 'Bin_to_BCD' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Bin_to_BCD.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'Bin_to_BCD' (8#1) [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Bin_to_BCD.vhd:13]
+INFO: [Synth 8-3491] module 'BCD_to_7Segment' declared at '/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/BCD_to_7Segment.vhd:6' bound to instance 'uut6_target_scoreTens' of component 'BCD_to_7Segment' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Reaction_Timer_System.vhd:217]
+INFO: [Synth 8-638] synthesizing module 'BCD_to_7Segment' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/BCD_to_7Segment.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'BCD_to_7Segment' (9#1) [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/BCD_to_7Segment.vhd:13]
+INFO: [Synth 8-3491] module 'BCD_to_7Segment' declared at '/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/BCD_to_7Segment.vhd:6' bound to instance 'uut6_target_scoreUnits' of component 'BCD_to_7Segment' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Reaction_Timer_System.vhd:222]
+INFO: [Synth 8-3491] module 'Bin_to_BCD' declared at '/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Bin_to_BCD.vhd:5' bound to instance 'uut5_test_cycles' of component 'Bin_to_BCD' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Reaction_Timer_System.vhd:230]
+INFO: [Synth 8-3491] module 'BCD_to_7Segment' declared at '/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/BCD_to_7Segment.vhd:6' bound to instance 'uut6_test_cyclesTens' of component 'BCD_to_7Segment' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Reaction_Timer_System.vhd:237]
+INFO: [Synth 8-3491] module 'BCD_to_7Segment' declared at '/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/BCD_to_7Segment.vhd:6' bound to instance 'uut6_test_cyclesUnits' of component 'BCD_to_7Segment' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Reaction_Timer_System.vhd:242]
+INFO: [Synth 8-3491] module 'Bin_to_BCD' declared at '/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Bin_to_BCD.vhd:5' bound to instance 'uut5_platerA' of component 'Bin_to_BCD' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Reaction_Timer_System.vhd:250]
+INFO: [Synth 8-3491] module 'Bin_to_BCD' declared at '/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Bin_to_BCD.vhd:5' bound to instance 'uut5_platerB' of component 'Bin_to_BCD' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Reaction_Timer_System.vhd:255]
+INFO: [Synth 8-3491] module 'BCD_to_7Segment' declared at '/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/BCD_to_7Segment.vhd:6' bound to instance 'uut6_platerATens' of component 'BCD_to_7Segment' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Reaction_Timer_System.vhd:263]
+INFO: [Synth 8-3491] module 'BCD_to_7Segment' declared at '/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/BCD_to_7Segment.vhd:6' bound to instance 'uut6_platerAUnits' of component 'BCD_to_7Segment' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Reaction_Timer_System.vhd:268]
+INFO: [Synth 8-3491] module 'BCD_to_7Segment' declared at '/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/BCD_to_7Segment.vhd:6' bound to instance 'uut6_platerBTens' of component 'BCD_to_7Segment' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Reaction_Timer_System.vhd:274]
+INFO: [Synth 8-3491] module 'BCD_to_7Segment' declared at '/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/BCD_to_7Segment.vhd:6' bound to instance 'uut6_platerBUnits' of component 'BCD_to_7Segment' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Reaction_Timer_System.vhd:279]
+INFO: [Synth 8-256] done synthesizing module 'Reaction_Timer_System' (10#1) [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/Reaction_Timer_System.vhd:52]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2602.512 ; gain = 0.000 ; free physical = 1958 ; free virtual = 9172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2602.512 ; gain = 0.000 ; free physical = 1960 ; free virtual = 9174
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2610.363 ; gain = 7.852 ; free physical = 1960 ; free virtual = 9174
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'key_state_reg' in module 'keypressed'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'config_fsm'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'stopwatch_ms'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'controller'
+INFO: [Synth 8-802] inferred FSM for state register 'state_5s_reg' in module 'controller'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                key_free |                              001 |                               00
+             key_pressed |                              010 |                               01
+            key_released |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'key_state_reg' using encoding 'one-hot' in module 'keypressed'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                               00
+                  config |                              010 |                               01
+                 confirm |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'config_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                               00
+                     run |                              010 |                               01
+                    stop |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'stopwatch_ms'
+WARNING: [Synth 8-327] inferring latch for variable 'config_enable_reg' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:132]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 idle_5s |                              001 |                               00
+                  run_5s |                              010 |                               01
+                 stop_5s |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_5s_reg' using encoding 'one-hot' in module 'controller'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:179]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:179]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                     000000000001 |                             0000
+                  config |                     000000000010 |                             0001
+          wait_for_start |                     000000000100 |                             0010
+             delay_timer |                     000000001000 |                             0011
+                   sp1_2 |                     000000010000 |                             1010
+                   sp2_2 |                     000000100000 |                             1011
+                 penalty |                     000001000000 |                             1100
+                stimulus |                     000010000000 |                             0100
+           points_assign |                     000100000000 |                             0101
+           compare_score |                     001000000000 |                             0111
+                  winner |                     010000000000 |                             1001
+               sec_delay |                     100000000000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'controller'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:179]
+WARNING: [Synth 8-327] inferring latch for variable 'test_cycles_reg_reg' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:190]
+WARNING: [Synth 8-327] inferring latch for variable 'score_playerA_reg_reg' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:191]
+WARNING: [Synth 8-327] inferring latch for variable 'score_playerB_reg_reg' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:192]
+WARNING: [Synth 8-327] inferring latch for variable 'stimulus_playerA_reg' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:193]
+WARNING: [Synth 8-327] inferring latch for variable 'stimulus_playerB_reg' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:194]
+WARNING: [Synth 8-327] inferring latch for variable 'sp2_time_reg' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:255]
+WARNING: [Synth 8-327] inferring latch for variable 'sp1_time_reg' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:254]
+WARNING: [Synth 8-327] inferring latch for variable 'sec_done_reg' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:340]
+WARNING: [Synth 8-327] inferring latch for variable 'sec5_en_reg' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:199]
+WARNING: [Synth 8-327] inferring latch for variable 'stopwatch_enable_reg' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:151]
+WARNING: [Synth 8-327] inferring latch for variable 'sec_count_reg' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:339]
+WARNING: [Synth 8-327] inferring latch for variable 'sec_en_reg' [/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.srcs/sources_1/new/controller.vhd:198]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2610.363 ; gain = 7.852 ; free physical = 2638 ; free virtual = 9873
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   24 Bit       Adders := 2     
+	   2 Input   16 Bit       Adders := 1     
+	   2 Input   14 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 6     
+	   2 Input    4 Bit       Adders := 4     
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 2     
+	               16 Bit    Registers := 1     
+	               14 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                7 Bit    Registers := 4     
+	                6 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   3 Input   24 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 1     
+	  12 Input   12 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 9     
+	   2 Input    7 Bit        Muxes := 8     
+	   2 Input    6 Bit        Muxes := 1     
+	  12 Input    6 Bit        Muxes := 2     
+	   5 Input    5 Bit        Muxes := 4     
+	   2 Input    4 Bit        Muxes := 8     
+	  12 Input    4 Bit        Muxes := 3     
+	   3 Input    3 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 4     
+	   3 Input    1 Bit        Muxes := 16    
+	   2 Input    1 Bit        Muxes := 14    
+	  12 Input    1 Bit        Muxes := 11    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2610.363 ; gain = 7.852 ; free physical = 2506 ; free virtual = 9758
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2610.363 ; gain = 7.852 ; free physical = 2507 ; free virtual = 9760
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2610.363 ; gain = 7.852 ; free physical = 2506 ; free virtual = 9759
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2610.363 ; gain = 7.852 ; free physical = 2507 ; free virtual = 9759
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2610.363 ; gain = 7.852 ; free physical = 2507 ; free virtual = 9759
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2610.363 ; gain = 7.852 ; free physical = 2507 ; free virtual = 9759
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2610.363 ; gain = 7.852 ; free physical = 2507 ; free virtual = 9760
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2610.363 ; gain = 7.852 ; free physical = 2507 ; free virtual = 9760
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2610.363 ; gain = 7.852 ; free physical = 2507 ; free virtual = 9760
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |     8|
+|3     |LUT1   |     5|
+|4     |LUT2   |    12|
+|5     |LUT3   |    17|
+|6     |LUT4   |    37|
+|7     |LUT5   |    58|
+|8     |LUT6   |    30|
+|9     |FDCE   |    81|
+|10    |FDPE   |    11|
+|11    |FDRE   |     3|
+|12    |LD     |    28|
+|13    |LDC    |     3|
+|14    |IBUF   |     6|
+|15    |OBUF   |    64|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------+---------------+------+
+|      |Instance    |Module         |Cells |
++------+------------+---------------+------+
+|1     |top         |               |   365|
+|2     |  uut1      |clock_ms       |    42|
+|3     |  uut2      |clock_1ms_1hz  |    28|
+|4     |  uut3_key0 |keypressed     |     8|
+|5     |  uut3_key1 |keypressed_0   |     6|
+|6     |  uut3_key2 |keypressed_1   |     6|
+|7     |  uut3_key3 |keypressed_2   |     8|
+|8     |  uut4      |controller     |   192|
+|9     |    spA     |stopwatch_ms   |     8|
+|10    |    spB     |stopwatch_ms_3 |    10|
+|11    |    uut1    |config_fsm     |    40|
+|12    |    uut2    |random_delay   |    41|
++------+------------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2610.363 ; gain = 7.852 ; free physical = 2507 ; free virtual = 9760
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 32 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2610.363 ; gain = 7.852 ; free physical = 2516 ; free virtual = 9769
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2610.371 ; gain = 7.852 ; free physical = 2516 ; free virtual = 9769
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2610.371 ; gain = 0.000 ; free physical = 2597 ; free virtual = 9850
+INFO: [Netlist 29-17] Analyzing 39 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2666.391 ; gain = 0.000 ; free physical = 2500 ; free virtual = 9767
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 31 instances were transformed.
+  LD => LDCE: 28 instances
+  LDC => LDCE: 3 instances
+
+Synth Design complete, checksum: 1e051d02
+INFO: [Common 17-83] Releasing license: Synthesis
+65 Infos, 32 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 2666.391 ; gain = 64.031 ; free physical = 2642 ; free virtual = 9910
+INFO: [Common 17-1381] The checkpoint '/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.runs/synth_1/Reaction_Timer_System.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Reaction_Timer_System_utilization_synth.rpt -pb Reaction_Timer_System_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue May 21 11:58:37 2024...

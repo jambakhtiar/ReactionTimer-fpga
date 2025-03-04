@@ -1,0 +1,857 @@
+Analysis & Synthesis report for Reaction_Timer_System
+Sun May 26 16:01:57 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Reaction_Timer_System|controller:uut4|state_5s
+  9. State Machine - |Reaction_Timer_System|controller:uut4|current_state
+ 10. State Machine - |Reaction_Timer_System|controller:uut4|stopwatch_ms:spB|state
+ 11. State Machine - |Reaction_Timer_System|controller:uut4|stopwatch_ms:spA|state
+ 12. State Machine - |Reaction_Timer_System|controller:uut4|config_fsm:uut1|state
+ 13. State Machine - |Reaction_Timer_System|keypressed:uut3_key3|key_state
+ 14. State Machine - |Reaction_Timer_System|keypressed:uut3_key2|key_state
+ 15. State Machine - |Reaction_Timer_System|keypressed:uut3_key1|key_state
+ 16. State Machine - |Reaction_Timer_System|keypressed:uut3_key0|key_state
+ 17. Registers Removed During Synthesis
+ 18. Removed Registers Triggering Further Register Optimizations
+ 19. General Register Statistics
+ 20. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun May 26 16:01:57 2024          ;
+; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Revision Name                      ; Reaction_Timer_System                          ;
+; Top-level Entity Name              ; Reaction_Timer_System                          ;
+; Family                             ; Cyclone IV E                                   ;
+; Total logic elements               ; 10                                             ;
+;     Total combinational functions  ; 0                                              ;
+;     Dedicated logic registers      ; 10                                             ;
+; Total registers                    ; 10                                             ;
+; Total pins                         ; 70                                             ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
++------------------------------------+------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                    ;
++------------------------------------------------------------------+-----------------------+-----------------------+
+; Option                                                           ; Setting               ; Default Value         ;
++------------------------------------------------------------------+-----------------------+-----------------------+
+; Device                                                           ; EP4CE115F29C7         ;                       ;
+; Top-level entity name                                            ; Reaction_Timer_System ; Reaction_Timer_System ;
+; Family name                                                      ; Cyclone IV E          ; Cyclone V             ;
+; Use smart compilation                                            ; Off                   ; Off                   ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                    ; On                    ;
+; Enable compact report table                                      ; Off                   ; Off                   ;
+; Restructure Multiplexers                                         ; Auto                  ; Auto                  ;
+; Create Debugging Nodes for IP Cores                              ; Off                   ; Off                   ;
+; Preserve fewer node names                                        ; On                    ; On                    ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable                ; Enable                ;
+; Verilog Version                                                  ; Verilog_2001          ; Verilog_2001          ;
+; VHDL Version                                                     ; VHDL_1993             ; VHDL_1993             ;
+; State Machine Processing                                         ; Auto                  ; Auto                  ;
+; Safe State Machine                                               ; Off                   ; Off                   ;
+; Extract Verilog State Machines                                   ; On                    ; On                    ;
+; Extract VHDL State Machines                                      ; On                    ; On                    ;
+; Ignore Verilog initial constructs                                ; Off                   ; Off                   ;
+; Iteration limit for constant Verilog loops                       ; 5000                  ; 5000                  ;
+; Iteration limit for non-constant Verilog loops                   ; 250                   ; 250                   ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                    ; On                    ;
+; Infer RAMs from Raw Logic                                        ; On                    ; On                    ;
+; Parallel Synthesis                                               ; On                    ; On                    ;
+; DSP Block Balancing                                              ; Auto                  ; Auto                  ;
+; NOT Gate Push-Back                                               ; On                    ; On                    ;
+; Power-Up Don't Care                                              ; On                    ; On                    ;
+; Remove Redundant Logic Cells                                     ; Off                   ; Off                   ;
+; Remove Duplicate Registers                                       ; On                    ; On                    ;
+; Ignore CARRY Buffers                                             ; Off                   ; Off                   ;
+; Ignore CASCADE Buffers                                           ; Off                   ; Off                   ;
+; Ignore GLOBAL Buffers                                            ; Off                   ; Off                   ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                   ; Off                   ;
+; Ignore LCELL Buffers                                             ; Off                   ; Off                   ;
+; Ignore SOFT Buffers                                              ; On                    ; On                    ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                   ; Off                   ;
+; Optimization Technique                                           ; Balanced              ; Balanced              ;
+; Carry Chain Length                                               ; 70                    ; 70                    ;
+; Auto Carry Chains                                                ; On                    ; On                    ;
+; Auto Open-Drain Pins                                             ; On                    ; On                    ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                   ; Off                   ;
+; Auto ROM Replacement                                             ; On                    ; On                    ;
+; Auto RAM Replacement                                             ; On                    ; On                    ;
+; Auto DSP Block Replacement                                       ; On                    ; On                    ;
+; Auto Shift Register Replacement                                  ; Auto                  ; Auto                  ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto                  ; Auto                  ;
+; Auto Clock Enable Replacement                                    ; On                    ; On                    ;
+; Strict RAM Replacement                                           ; Off                   ; Off                   ;
+; Allow Synchronous Control Signals                                ; On                    ; On                    ;
+; Force Use of Synchronous Clear Signals                           ; Off                   ; Off                   ;
+; Auto RAM Block Balancing                                         ; On                    ; On                    ;
+; Auto RAM to Logic Cell Conversion                                ; Off                   ; Off                   ;
+; Auto Resource Sharing                                            ; Off                   ; Off                   ;
+; Allow Any RAM Size For Recognition                               ; Off                   ; Off                   ;
+; Allow Any ROM Size For Recognition                               ; Off                   ; Off                   ;
+; Allow Any Shift Register Size For Recognition                    ; Off                   ; Off                   ;
+; Use LogicLock Constraints during Resource Balancing              ; On                    ; On                    ;
+; Ignore translate_off and synthesis_off directives                ; Off                   ; Off                   ;
+; Timing-Driven Synthesis                                          ; On                    ; On                    ;
+; Report Parameter Settings                                        ; On                    ; On                    ;
+; Report Source Assignments                                        ; On                    ; On                    ;
+; Report Connectivity Checks                                       ; On                    ; On                    ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                   ; Off                   ;
+; Synchronization Register Chain Length                            ; 2                     ; 2                     ;
+; Power Optimization During Synthesis                              ; Normal compilation    ; Normal compilation    ;
+; HDL message level                                                ; Level2                ; Level2                ;
+; Suppress Register Optimization Related Messages                  ; Off                   ; Off                   ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000                  ; 5000                  ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000                  ; 5000                  ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                   ; 100                   ;
+; Clock MUX Protection                                             ; On                    ; On                    ;
+; Auto Gated Clock Conversion                                      ; Off                   ; Off                   ;
+; Block Design Naming                                              ; Auto                  ; Auto                  ;
+; SDC constraint protection                                        ; Off                   ; Off                   ;
+; Synthesis Effort                                                 ; Auto                  ; Auto                  ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                    ; On                    ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                   ; Off                   ;
+; Analysis & Synthesis Message Level                               ; Medium                ; Medium                ;
+; Disable Register Merging Across Hierarchies                      ; Auto                  ; Auto                  ;
+; Resource Aware Inference For Block RAM                           ; On                    ; On                    ;
++------------------------------------------------------------------+-----------------------+-----------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                 ;
++----------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path       ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                    ; Library ;
++----------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; code/sources/BCD_to_7Segment.vhd       ; yes             ; User VHDL File  ; /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/BCD_to_7Segment.vhd       ;         ;
+; code/sources/Bin_to_BCD.vhd            ; yes             ; User VHDL File  ; /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Bin_to_BCD.vhd            ;         ;
+; code/sources/clock_1ms_1hz.vhd         ; yes             ; User VHDL File  ; /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/clock_1ms_1hz.vhd         ;         ;
+; code/sources/clock_ms.vhd              ; yes             ; User VHDL File  ; /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/clock_ms.vhd              ;         ;
+; code/sources/configuration_fsm.vhd     ; yes             ; User VHDL File  ; /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/configuration_fsm.vhd     ;         ;
+; code/sources/controller.vhd            ; yes             ; User VHDL File  ; /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd            ;         ;
+; code/sources/keypressed.vhd            ; yes             ; User VHDL File  ; /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/keypressed.vhd            ;         ;
+; code/sources/random_delay.vhd          ; yes             ; User VHDL File  ; /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/random_delay.vhd          ;         ;
+; code/sources/Reaction_Timer_System.vhd ; yes             ; User VHDL File  ; /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd ;         ;
+; code/sources/stopwatch_ms.vhd          ; yes             ; User VHDL File  ; /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/stopwatch_ms.vhd          ;         ;
+; ClockDivider.vhd                       ; yes             ; User VHDL File  ; /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/ClockDivider.vhd                       ;         ;
++----------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimated Total logic elements              ; 10              ;
+;                                             ;                 ;
+; Total combinational functions               ; 0               ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 0               ;
+;     -- 3 input functions                    ; 0               ;
+;     -- <=2 input functions                  ; 0               ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 0               ;
+;     -- arithmetic mode                      ; 0               ;
+;                                             ;                 ;
+; Total registers                             ; 10              ;
+;     -- Dedicated logic registers            ; 10              ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 70              ;
+;                                             ;                 ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+;                                             ;                 ;
+; Maximum fan-out node                        ; clk_50mhz~input ;
+; Maximum fan-out                             ; 10              ;
+; Total fan-out                               ; 100             ;
+; Average fan-out                             ; 0.67            ;
++---------------------------------------------+-----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                   ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name    ; Entity Name           ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------+-----------------------+--------------+
+; |Reaction_Timer_System     ; 0 (0)               ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 70   ; 0            ; |Reaction_Timer_System ; Reaction_Timer_System ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------+-----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------+
+; State Machine - |Reaction_Timer_System|controller:uut4|state_5s          ;
++------------------+------------------+-----------------+------------------+
+; Name             ; state_5s.STOP_5s ; state_5s.RUN_5s ; state_5s.IDLE_5s ;
++------------------+------------------+-----------------+------------------+
+; state_5s.IDLE_5s ; 0                ; 0               ; 0                ;
+; state_5s.RUN_5s  ; 0                ; 1               ; 1                ;
+; state_5s.STOP_5s ; 1                ; 0               ; 1                ;
++------------------+------------------+-----------------+------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Reaction_Timer_System|controller:uut4|current_state                                                                                                                                                                                                                                                                                                    ;
++------------------------------+-----------------------+---------------------+---------------------+----------------------+-------------------------+-----------------------------+-------------------------+-----------------------------+------------------------+---------------------------+------------------------------+----------------------+--------------------+
+; Name                         ; current_state.PENALTY ; current_state.SP2_2 ; current_state.SP1_2 ; current_state.WINNER ; current_state.SEC_DELAY ; current_state.COMPARE_SCORE ; current_state.INC_SCORE ; current_state.POINTS_ASSIGN ; current_state.STIMULUS ; current_state.DELAY_TIMER ; current_state.WAIT_for_START ; current_state.CONFIG ; current_state.IDLE ;
++------------------------------+-----------------------+---------------------+---------------------+----------------------+-------------------------+-----------------------------+-------------------------+-----------------------------+------------------------+---------------------------+------------------------------+----------------------+--------------------+
+; current_state.IDLE           ; 0                     ; 0                   ; 0                   ; 0                    ; 0                       ; 0                           ; 0                       ; 0                           ; 0                      ; 0                         ; 0                            ; 0                    ; 0                  ;
+; current_state.CONFIG         ; 0                     ; 0                   ; 0                   ; 0                    ; 0                       ; 0                           ; 0                       ; 0                           ; 0                      ; 0                         ; 0                            ; 1                    ; 1                  ;
+; current_state.WAIT_for_START ; 0                     ; 0                   ; 0                   ; 0                    ; 0                       ; 0                           ; 0                       ; 0                           ; 0                      ; 0                         ; 1                            ; 0                    ; 1                  ;
+; current_state.DELAY_TIMER    ; 0                     ; 0                   ; 0                   ; 0                    ; 0                       ; 0                           ; 0                       ; 0                           ; 0                      ; 1                         ; 0                            ; 0                    ; 1                  ;
+; current_state.STIMULUS       ; 0                     ; 0                   ; 0                   ; 0                    ; 0                       ; 0                           ; 0                       ; 0                           ; 1                      ; 0                         ; 0                            ; 0                    ; 1                  ;
+; current_state.POINTS_ASSIGN  ; 0                     ; 0                   ; 0                   ; 0                    ; 0                       ; 0                           ; 0                       ; 1                           ; 0                      ; 0                         ; 0                            ; 0                    ; 1                  ;
+; current_state.INC_SCORE      ; 0                     ; 0                   ; 0                   ; 0                    ; 0                       ; 0                           ; 1                       ; 0                           ; 0                      ; 0                         ; 0                            ; 0                    ; 1                  ;
+; current_state.COMPARE_SCORE  ; 0                     ; 0                   ; 0                   ; 0                    ; 0                       ; 1                           ; 0                       ; 0                           ; 0                      ; 0                         ; 0                            ; 0                    ; 1                  ;
+; current_state.SEC_DELAY      ; 0                     ; 0                   ; 0                   ; 0                    ; 1                       ; 0                           ; 0                       ; 0                           ; 0                      ; 0                         ; 0                            ; 0                    ; 1                  ;
+; current_state.WINNER         ; 0                     ; 0                   ; 0                   ; 1                    ; 0                       ; 0                           ; 0                       ; 0                           ; 0                      ; 0                         ; 0                            ; 0                    ; 1                  ;
+; current_state.SP1_2          ; 0                     ; 0                   ; 1                   ; 0                    ; 0                       ; 0                           ; 0                       ; 0                           ; 0                      ; 0                         ; 0                            ; 0                    ; 1                  ;
+; current_state.SP2_2          ; 0                     ; 1                   ; 0                   ; 0                    ; 0                       ; 0                           ; 0                       ; 0                           ; 0                      ; 0                         ; 0                            ; 0                    ; 1                  ;
+; current_state.PENALTY        ; 1                     ; 0                   ; 0                   ; 0                    ; 0                       ; 0                           ; 0                       ; 0                           ; 0                      ; 0                         ; 0                            ; 0                    ; 1                  ;
++------------------------------+-----------------------+---------------------+---------------------+----------------------+-------------------------+-----------------------------+-------------------------+-----------------------------+------------------------+---------------------------+------------------------------+----------------------+--------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------+
+; State Machine - |Reaction_Timer_System|controller:uut4|stopwatch_ms:spB|state ;
++------------+------------+-----------+-----------------------------------------+
+; Name       ; state.STOP ; state.RUN ; state.IDLE                              ;
++------------+------------+-----------+-----------------------------------------+
+; state.IDLE ; 0          ; 0         ; 0                                       ;
+; state.RUN  ; 0          ; 1         ; 1                                       ;
+; state.STOP ; 1          ; 0         ; 1                                       ;
++------------+------------+-----------+-----------------------------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------+
+; State Machine - |Reaction_Timer_System|controller:uut4|stopwatch_ms:spA|state ;
++------------+------------+-----------+-----------------------------------------+
+; Name       ; state.STOP ; state.RUN ; state.IDLE                              ;
++------------+------------+-----------+-----------------------------------------+
+; state.IDLE ; 0          ; 0         ; 0                                       ;
+; state.RUN  ; 0          ; 1         ; 1                                       ;
+; state.STOP ; 1          ; 0         ; 1                                       ;
++------------+------------+-----------+-----------------------------------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------+
+; State Machine - |Reaction_Timer_System|controller:uut4|config_fsm:uut1|state ;
++---------------+---------------+--------------+-------------------------------+
+; Name          ; state.CONFIRM ; state.CONFIG ; state.IDLE                    ;
++---------------+---------------+--------------+-------------------------------+
+; state.IDLE    ; 0             ; 0            ; 0                             ;
+; state.CONFIG  ; 0             ; 1            ; 1                             ;
+; state.CONFIRM ; 1             ; 0            ; 1                             ;
++---------------+---------------+--------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------+
+; State Machine - |Reaction_Timer_System|keypressed:uut3_key3|key_state                        ;
++------------------------+------------------------+-----------------------+--------------------+
+; Name                   ; key_state.KEY_RELEASED ; key_state.KEY_PRESSED ; key_state.KEY_FREE ;
++------------------------+------------------------+-----------------------+--------------------+
+; key_state.KEY_FREE     ; 0                      ; 0                     ; 0                  ;
+; key_state.KEY_PRESSED  ; 0                      ; 1                     ; 1                  ;
+; key_state.KEY_RELEASED ; 1                      ; 0                     ; 1                  ;
++------------------------+------------------------+-----------------------+--------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------+
+; State Machine - |Reaction_Timer_System|keypressed:uut3_key2|key_state                        ;
++------------------------+------------------------+-----------------------+--------------------+
+; Name                   ; key_state.KEY_RELEASED ; key_state.KEY_PRESSED ; key_state.KEY_FREE ;
++------------------------+------------------------+-----------------------+--------------------+
+; key_state.KEY_FREE     ; 0                      ; 0                     ; 0                  ;
+; key_state.KEY_PRESSED  ; 0                      ; 1                     ; 1                  ;
+; key_state.KEY_RELEASED ; 1                      ; 0                     ; 1                  ;
++------------------------+------------------------+-----------------------+--------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------+
+; State Machine - |Reaction_Timer_System|keypressed:uut3_key1|key_state                        ;
++------------------------+------------------------+-----------------------+--------------------+
+; Name                   ; key_state.KEY_RELEASED ; key_state.KEY_PRESSED ; key_state.KEY_FREE ;
++------------------------+------------------------+-----------------------+--------------------+
+; key_state.KEY_FREE     ; 0                      ; 0                     ; 0                  ;
+; key_state.KEY_PRESSED  ; 0                      ; 1                     ; 1                  ;
+; key_state.KEY_RELEASED ; 1                      ; 0                     ; 1                  ;
++------------------------+------------------------+-----------------------+--------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------+
+; State Machine - |Reaction_Timer_System|keypressed:uut3_key0|key_state                        ;
++------------------------+------------------------+-----------------------+--------------------+
+; Name                   ; key_state.KEY_RELEASED ; key_state.KEY_PRESSED ; key_state.KEY_FREE ;
++------------------------+------------------------+-----------------------+--------------------+
+; key_state.KEY_FREE     ; 0                      ; 0                     ; 0                  ;
+; key_state.KEY_PRESSED  ; 0                      ; 1                     ; 1                  ;
+; key_state.KEY_RELEASED ; 1                      ; 0                     ; 1                  ;
++------------------------+------------------------+-----------------------+--------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                             ;
++--------------------------------------------------+---------------------------------------------+
+; Register name                                    ; Reason for Removal                          ;
++--------------------------------------------------+---------------------------------------------+
+; HEX3[5]~reg0                                     ; Stuck at GND due to stuck port data_in      ;
+; HEX3[4]~reg0                                     ; Stuck at GND due to stuck port data_in      ;
+; HEX3[3]~reg0                                     ; Stuck at GND due to stuck port data_in      ;
+; HEX2[6]~reg0                                     ; Stuck at GND due to stuck port data_in      ;
+; HEX2[4]~reg0                                     ; Stuck at GND due to stuck port data_in      ;
+; HEX2[3]~reg0                                     ; Stuck at GND due to stuck port data_in      ;
+; HEX1[6]~reg0                                     ; Stuck at GND due to stuck port data_in      ;
+; HEX1[2]~reg0                                     ; Stuck at GND due to stuck port data_in      ;
+; HEX0[6]~reg0                                     ; Stuck at GND due to stuck port data_in      ;
+; HEX0[5]~reg0                                     ; Stuck at GND due to stuck port data_in      ;
+; HEX0[4]~reg0                                     ; Stuck at GND due to stuck port data_in      ;
+; controller:uut4|stopwatch_ms:spA|time[0..23]     ; Lost fanout                                 ;
+; controller:uut4|stopwatch_ms:spB|time[0..23]     ; Lost fanout                                 ;
+; controller:uut4|current_state.INC_SCORE          ; Lost fanout                                 ;
+; controller:uut4|current_state.IDLE               ; Stuck at GND due to stuck port clock        ;
+; controller:uut4|current_state.CONFIG             ; Stuck at GND due to stuck port clock        ;
+; controller:uut4|current_state.WAIT_for_START     ; Stuck at GND due to stuck port clock        ;
+; controller:uut4|current_state.DELAY_TIMER        ; Stuck at GND due to stuck port clock        ;
+; controller:uut4|current_state.STIMULUS           ; Stuck at GND due to stuck port clock        ;
+; controller:uut4|random_delay:uut2|delay          ; Lost fanout                                 ;
+; controller:uut4|current_state.POINTS_ASSIGN      ; Stuck at GND due to stuck port clock        ;
+; controller:uut4|current_state.COMPARE_SCORE      ; Stuck at GND due to stuck port clock        ;
+; controller:uut4|current_state.SEC_DELAY          ; Stuck at GND due to stuck port clock        ;
+; controller:uut4|current_state.WINNER             ; Stuck at GND due to stuck port clock        ;
+; controller:uut4|current_state.SP1_2              ; Stuck at GND due to stuck port clock        ;
+; controller:uut4|current_state.SP2_2              ; Stuck at GND due to stuck port clock        ;
+; controller:uut4|current_state.PENALTY            ; Stuck at GND due to stuck port clock        ;
+; controller:uut4|stopwatch_ms:spB|state.IDLE      ; Lost fanout                                 ;
+; controller:uut4|stopwatch_ms:spA|state.IDLE      ; Lost fanout                                 ;
+; controller:uut4|config_fsm:uut1|state.IDLE       ; Lost fanout                                 ;
+; HEX0[3]~reg0                                     ; Stuck at GND due to stuck port data_in      ;
+; HEX1[0]~reg0                                     ; Stuck at GND due to stuck port data_in      ;
+; HEX1[3]~reg0                                     ; Stuck at GND due to stuck port data_in      ;
+; HEX1[5]~reg0                                     ; Stuck at GND due to stuck port data_in      ;
+; HEX2[0]~reg0                                     ; Stuck at GND due to stuck port data_in      ;
+; HEX2[5]~reg0                                     ; Stuck at GND due to stuck port data_in      ;
+; HEX3[6]~reg0                                     ; Stuck at GND due to stuck port data_in      ;
+; controller:uut4|sec5_count[0..2]                 ; Lost fanout                                 ;
+; controller:uut4|stopwatch_ms:spA|swatch_stopped  ; Lost fanout                                 ;
+; controller:uut4|stopwatch_ms:spB|swatch_stopped  ; Lost fanout                                 ;
+; controller:uut4|sec5_done                        ; Lost fanout                                 ;
+; controller:uut4|config_fsm:uut1|config_done      ; Lost fanout                                 ;
+; controller:uut4|random_delay:uut2|counter[0..13] ; Lost fanout                                 ;
+; controller:uut4|state_5s.IDLE_5s                 ; Lost fanout                                 ;
+; controller:uut4|state_5s.RUN_5s                  ; Lost fanout                                 ;
+; controller:uut4|state_5s.STOP_5s                 ; Lost fanout                                 ;
+; controller:uut4|stopwatch_ms:spB|state.RUN       ; Lost fanout                                 ;
+; controller:uut4|stopwatch_ms:spB|state.STOP      ; Lost fanout                                 ;
+; controller:uut4|stopwatch_ms:spA|state.RUN       ; Lost fanout                                 ;
+; controller:uut4|stopwatch_ms:spA|state.STOP      ; Lost fanout                                 ;
+; controller:uut4|config_fsm:uut1|state.CONFIRM    ; Lost fanout                                 ;
+; keypressed:uut3_key3|key_state.KEY_FREE          ; Lost fanout                                 ;
+; keypressed:uut3_key3|key_state.KEY_PRESSED       ; Lost fanout                                 ;
+; keypressed:uut3_key3|key_state.KEY_RELEASED      ; Lost fanout                                 ;
+; keypressed:uut3_key1|key_state.KEY_FREE          ; Lost fanout                                 ;
+; keypressed:uut3_key1|key_state.KEY_PRESSED       ; Lost fanout                                 ;
+; keypressed:uut3_key1|key_state.KEY_RELEASED      ; Lost fanout                                 ;
+; controller:uut4|config_fsm:uut1|state.CONFIG     ; Stuck at GND due to stuck port data_in      ;
+; controller:uut4|config_fsm:uut1|score[4]         ; Stuck at GND due to stuck port clock_enable ;
+; controller:uut4|config_fsm:uut1|score[1]         ; Stuck at VCC due to stuck port clock_enable ;
+; controller:uut4|config_fsm:uut1|score[2]         ; Stuck at GND due to stuck port clock_enable ;
+; controller:uut4|config_fsm:uut1|score[3]         ; Stuck at VCC due to stuck port clock_enable ;
+; controller:uut4|config_fsm:uut1|score[0,5]       ; Stuck at GND due to stuck port clock_enable ;
+; clock_1ms_1hz:uut2|clk_1hz_reg                   ; Lost fanout                                 ;
+; keypressed:uut3_key0|key_state.KEY_RELEASED      ; Lost fanout                                 ;
+; clock_ms:uut1|clk_out_reg                        ; Lost fanout                                 ;
+; clock_1ms_1hz:uut2|counter[0..9]                 ; Lost fanout                                 ;
+; keypressed:uut3_key2|key_state.KEY_RELEASED      ; Lost fanout                                 ;
+; keypressed:uut3_key0|key_state.KEY_PRESSED       ; Lost fanout                                 ;
+; clock_ms:uut1|counter[0..15]                     ; Lost fanout                                 ;
+; keypressed:uut3_key2|key_state.KEY_PRESSED       ; Lost fanout                                 ;
+; keypressed:uut3_key0|key_state.KEY_FREE          ; Lost fanout                                 ;
+; keypressed:uut3_key2|key_state.KEY_FREE          ; Lost fanout                                 ;
+; Total Number of Removed Registers = 159          ;                                             ;
++--------------------------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                   ;
++---------------------------------------------+-------------------------+---------------------------------------------------------------------------------------+
+; Register name                               ; Reason for Removal      ; Registers Removed due to This Register                                                ;
++---------------------------------------------+-------------------------+---------------------------------------------------------------------------------------+
+; controller:uut4|current_state.CONFIG        ; Stuck at GND            ; controller:uut4|current_state.WAIT_for_START,                                         ;
+;                                             ; due to stuck port clock ; controller:uut4|current_state.SEC_DELAY,                                              ;
+;                                             ;                         ; controller:uut4|config_fsm:uut1|state.IDLE, HEX0[3]~reg0, HEX1[0]~reg0, HEX1[3]~reg0, ;
+;                                             ;                         ; HEX1[5]~reg0, HEX2[0]~reg0, HEX2[5]~reg0, HEX3[6]~reg0,                               ;
+;                                             ;                         ; controller:uut4|config_fsm:uut1|config_done,                                          ;
+;                                             ;                         ; controller:uut4|config_fsm:uut1|state.CONFIRM,                                        ;
+;                                             ;                         ; controller:uut4|config_fsm:uut1|state.CONFIG,                                         ;
+;                                             ;                         ; controller:uut4|config_fsm:uut1|score[4], controller:uut4|config_fsm:uut1|score[1],   ;
+;                                             ;                         ; controller:uut4|config_fsm:uut1|score[2], controller:uut4|config_fsm:uut1|score[3],   ;
+;                                             ;                         ; controller:uut4|config_fsm:uut1|score[5], controller:uut4|config_fsm:uut1|score[0],   ;
+;                                             ;                         ; clock_1ms_1hz:uut2|clk_1hz_reg, clock_1ms_1hz:uut2|counter[9],                        ;
+;                                             ;                         ; clock_1ms_1hz:uut2|counter[8], clock_1ms_1hz:uut2|counter[7],                         ;
+;                                             ;                         ; clock_1ms_1hz:uut2|counter[6], clock_1ms_1hz:uut2|counter[5],                         ;
+;                                             ;                         ; clock_1ms_1hz:uut2|counter[4], clock_1ms_1hz:uut2|counter[3],                         ;
+;                                             ;                         ; clock_1ms_1hz:uut2|counter[2], clock_1ms_1hz:uut2|counter[1],                         ;
+;                                             ;                         ; clock_1ms_1hz:uut2|counter[0], keypressed:uut3_key2|key_state.KEY_RELEASED,           ;
+;                                             ;                         ; keypressed:uut3_key2|key_state.KEY_PRESSED,                                           ;
+;                                             ;                         ; keypressed:uut3_key2|key_state.KEY_FREE                                               ;
+; controller:uut4|current_state.DELAY_TIMER   ; Stuck at GND            ; controller:uut4|current_state.STIMULUS, controller:uut4|random_delay:uut2|delay,      ;
+;                                             ; due to stuck port clock ; controller:uut4|current_state.POINTS_ASSIGN, controller:uut4|current_state.WINNER,    ;
+;                                             ;                         ; controller:uut4|current_state.SP1_2, controller:uut4|current_state.SP2_2,             ;
+;                                             ;                         ; controller:uut4|current_state.PENALTY, controller:uut4|stopwatch_ms:spB|state.IDLE,   ;
+;                                             ;                         ; controller:uut4|stopwatch_ms:spA|state.IDLE, controller:uut4|sec5_count[0],           ;
+;                                             ;                         ; controller:uut4|random_delay:uut2|counter[13],                                        ;
+;                                             ;                         ; controller:uut4|random_delay:uut2|counter[12],                                        ;
+;                                             ;                         ; controller:uut4|random_delay:uut2|counter[11],                                        ;
+;                                             ;                         ; controller:uut4|random_delay:uut2|counter[10],                                        ;
+;                                             ;                         ; controller:uut4|random_delay:uut2|counter[9],                                         ;
+;                                             ;                         ; controller:uut4|random_delay:uut2|counter[8],                                         ;
+;                                             ;                         ; controller:uut4|random_delay:uut2|counter[7],                                         ;
+;                                             ;                         ; controller:uut4|random_delay:uut2|counter[6],                                         ;
+;                                             ;                         ; controller:uut4|random_delay:uut2|counter[5],                                         ;
+;                                             ;                         ; controller:uut4|random_delay:uut2|counter[4],                                         ;
+;                                             ;                         ; controller:uut4|random_delay:uut2|counter[3],                                         ;
+;                                             ;                         ; controller:uut4|random_delay:uut2|counter[2],                                         ;
+;                                             ;                         ; controller:uut4|random_delay:uut2|counter[1],                                         ;
+;                                             ;                         ; controller:uut4|random_delay:uut2|counter[0], controller:uut4|state_5s.IDLE_5s,       ;
+;                                             ;                         ; controller:uut4|state_5s.RUN_5s, controller:uut4|stopwatch_ms:spB|state.RUN,          ;
+;                                             ;                         ; controller:uut4|stopwatch_ms:spA|state.RUN,                                           ;
+;                                             ;                         ; keypressed:uut3_key3|key_state.KEY_RELEASED,                                          ;
+;                                             ;                         ; keypressed:uut3_key0|key_state.KEY_RELEASED,                                          ;
+;                                             ;                         ; keypressed:uut3_key0|key_state.KEY_PRESSED,                                           ;
+;                                             ;                         ; keypressed:uut3_key0|key_state.KEY_FREE                                               ;
+; controller:uut4|stopwatch_ms:spA|time[23]   ; Lost Fanouts            ; clock_ms:uut1|clk_out_reg, clock_ms:uut1|counter[15], clock_ms:uut1|counter[14],      ;
+;                                             ;                         ; clock_ms:uut1|counter[13], clock_ms:uut1|counter[12], clock_ms:uut1|counter[11],      ;
+;                                             ;                         ; clock_ms:uut1|counter[10], clock_ms:uut1|counter[9], clock_ms:uut1|counter[8],        ;
+;                                             ;                         ; clock_ms:uut1|counter[7], clock_ms:uut1|counter[6], clock_ms:uut1|counter[5],         ;
+;                                             ;                         ; clock_ms:uut1|counter[4], clock_ms:uut1|counter[3], clock_ms:uut1|counter[2],         ;
+;                                             ;                         ; clock_ms:uut1|counter[1], clock_ms:uut1|counter[0]                                    ;
+; controller:uut4|current_state.IDLE          ; Stuck at GND            ; controller:uut4|stopwatch_ms:spA|swatch_stopped,                                      ;
+;                                             ; due to stuck port clock ; controller:uut4|stopwatch_ms:spA|state.STOP,                                          ;
+;                                             ;                         ; keypressed:uut3_key1|key_state.KEY_RELEASED                                           ;
+; controller:uut4|current_state.COMPARE_SCORE ; Stuck at GND            ; controller:uut4|stopwatch_ms:spB|swatch_stopped,                                      ;
+;                                             ; due to stuck port clock ; controller:uut4|stopwatch_ms:spB|state.STOP                                           ;
+; controller:uut4|sec5_count[2]               ; Lost Fanouts            ; controller:uut4|sec5_count[1]                                                         ;
+; controller:uut4|sec5_done                   ; Lost Fanouts            ; controller:uut4|state_5s.STOP_5s                                                      ;
++---------------------------------------------+-------------------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 10    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 10    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Reaction_Timer_System|Bin_to_BCD:uut5_target_Score|bcd_tens[2] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 70                          ;
+; cycloneiii_ff         ; 10                          ;
+;     CLR               ; 10                          ;
+; cycloneiii_lcell_comb ; 2                           ;
+;     normal            ; 2                           ;
+;         0 data inputs ; 2                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+    Info: Processing started: Sun May 26 16:01:48 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Reaction_Timer_System -c Reaction_Timer_System
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file code/sources/BCD_to_7Segment.vhd
+    Info (12022): Found design unit 1: BCD_to_7Segment-Behavioral File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/BCD_to_7Segment.vhd Line: 13
+    Info (12023): Found entity 1: BCD_to_7Segment File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/BCD_to_7Segment.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file code/sources/Bin_to_BCD.vhd
+    Info (12022): Found design unit 1: Bin_to_BCD-Behavioral File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Bin_to_BCD.vhd Line: 13
+    Info (12023): Found entity 1: Bin_to_BCD File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Bin_to_BCD.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file code/sources/clock_1ms_1hz.vhd
+    Info (12022): Found design unit 1: clock_1ms_1hz-Behavioral File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/clock_1ms_1hz.vhd Line: 12
+    Info (12023): Found entity 1: clock_1ms_1hz File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/clock_1ms_1hz.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file code/sources/clock_ms.vhd
+    Info (12022): Found design unit 1: clock_ms-Behavioral File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/clock_ms.vhd Line: 13
+    Info (12023): Found entity 1: clock_ms File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/clock_ms.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file code/sources/configuration_fsm.vhd
+    Info (12022): Found design unit 1: config_fsm-Behavioral File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/configuration_fsm.vhd Line: 17
+    Info (12023): Found entity 1: config_fsm File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/configuration_fsm.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file code/sources/controller.vhd
+    Info (12022): Found design unit 1: controller-FSM File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 41
+    Info (12023): Found entity 1: controller File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 17
+Info (12021): Found 2 design units, including 1 entities, in source file code/sources/keypressed.vhd
+    Info (12022): Found design unit 1: keypressed-Behavioral File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/keypressed.vhd Line: 15
+    Info (12023): Found entity 1: keypressed File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/keypressed.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file code/sources/random_delay.vhd
+    Info (12022): Found design unit 1: random_delay-Behavioral File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/random_delay.vhd Line: 13
+    Info (12023): Found entity 1: random_delay File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/random_delay.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file code/sources/Reaction_Timer_System.vhd
+    Info (12022): Found design unit 1: Reaction_Timer_System-Behavioral File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 52
+    Info (12023): Found entity 1: Reaction_Timer_System File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 34
+Info (12021): Found 2 design units, including 1 entities, in source file code/sources/stopwatch_ms.vhd
+    Info (12022): Found design unit 1: stopwatch_ms-Behavioral File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/stopwatch_ms.vhd Line: 16
+    Info (12023): Found entity 1: stopwatch_ms File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/stopwatch_ms.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file code/testBenchs/tb_BCD_to_7Segment.vhd
+    Info (12022): Found design unit 1: tb_BCD_to_7Segment-Behavioral File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_BCD_to_7Segment.vhd Line: 7
+    Info (12023): Found entity 1: tb_BCD_to_7Segment File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_BCD_to_7Segment.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file code/testBenchs/tb_Bin_to_BCD.vhd
+    Info (12022): Found design unit 1: tb_Bin_to_BCD-Behavioral File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_Bin_to_BCD.vhd Line: 8
+    Info (12023): Found entity 1: tb_Bin_to_BCD File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_Bin_to_BCD.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file code/testBenchs/tb_clock_1ms_1hz.vhd
+    Info (12022): Found design unit 1: tb_clock_1ms_1hz-Behavioral File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_clock_1ms_1hz.vhd Line: 7
+    Info (12023): Found entity 1: tb_clock_1ms_1hz File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_clock_1ms_1hz.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file code/testBenchs/tb_clock_ms.vhd
+    Info (12022): Found design unit 1: tb_clock_ms-Behavioral File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_clock_ms.vhd Line: 8
+    Info (12023): Found entity 1: tb_clock_ms File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_clock_ms.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file code/testBenchs/tb_config_fsm.vhd
+    Info (12022): Found design unit 1: tb_config_fsm-Behavioral File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_config_fsm.vhd Line: 8
+    Info (12023): Found entity 1: tb_config_fsm File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_config_fsm.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file code/testBenchs/tb_controller.vhd
+    Info (12022): Found design unit 1: tb_controller-Behavioral File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_controller.vhd Line: 8
+    Info (12023): Found entity 1: tb_controller File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_controller.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file code/testBenchs/tb_keypressed.vhd
+    Info (12022): Found design unit 1: tb_keypressed-Behavioral File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_keypressed.vhd Line: 7
+    Info (12023): Found entity 1: tb_keypressed File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_keypressed.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file code/testBenchs/tb_random_delay.vhd
+    Info (12022): Found design unit 1: tb_random_delay-Behavioral File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_random_delay.vhd Line: 8
+    Info (12023): Found entity 1: tb_random_delay File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_random_delay.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file code/testBenchs/tb_stopwatch_ms.vhd
+    Info (12022): Found design unit 1: tb_stopwatch_ms-Behavioral File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_stopwatch_ms.vhd Line: 8
+    Info (12023): Found entity 1: tb_stopwatch_ms File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_stopwatch_ms.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ClockDivider.vhd
+    Info (12022): Found design unit 1: ClockDivider-Behavioral File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/ClockDivider.vhd Line: 14
+    Info (12023): Found entity 1: ClockDivider File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/ClockDivider.vhd Line: 6
+Info (12127): Elaborating entity "Reaction_Timer_System" for the top level hierarchy
+Info (12128): Elaborating entity "ClockDivider" for hierarchy "ClockDivider:uut0" File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 155
+Warning (10631): VHDL Process Statement warning at ClockDivider.vhd(18): inferring latch(es) for signal or variable "clk_1hz_reg", which holds its previous value in one or more paths through the process File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/ClockDivider.vhd Line: 18
+Info (10041): Inferred latch for "clk_1hz_reg" at ClockDivider.vhd(18) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/ClockDivider.vhd Line: 18
+Info (12128): Elaborating entity "clock_ms" for hierarchy "clock_ms:uut1" File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 162
+Info (12128): Elaborating entity "clock_1ms_1hz" for hierarchy "clock_1ms_1hz:uut2" File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 169
+Info (12128): Elaborating entity "keypressed" for hierarchy "keypressed:uut3_key0" File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 179
+Info (12128): Elaborating entity "controller" for hierarchy "controller:uut4" File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 210
+Warning (10036): Verilog HDL or VHDL warning at controller.vhd(61): object "timer_enable" assigned a value but never read File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 61
+Warning (10492): VHDL Process Statement warning at controller.vhd(215): signal "config_done" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 215
+Warning (10492): VHDL Process Statement warning at controller.vhd(236): signal "timer_done" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 236
+Warning (10492): VHDL Process Statement warning at controller.vhd(252): signal "sp1_done" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 252
+Warning (10492): VHDL Process Statement warning at controller.vhd(252): signal "sp2_done" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 252
+Warning (10492): VHDL Process Statement warning at controller.vhd(254): signal "sp1_time_w" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 254
+Warning (10492): VHDL Process Statement warning at controller.vhd(255): signal "sp2_time_w" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 255
+Warning (10492): VHDL Process Statement warning at controller.vhd(259): signal "test_cycles_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 259
+Warning (10492): VHDL Process Statement warning at controller.vhd(260): signal "sp1_time" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 260
+Warning (10492): VHDL Process Statement warning at controller.vhd(260): signal "sp2_time" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 260
+Warning (10492): VHDL Process Statement warning at controller.vhd(261): signal "score_playerA_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 261
+Warning (10492): VHDL Process Statement warning at controller.vhd(262): signal "sp2_time" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 262
+Warning (10492): VHDL Process Statement warning at controller.vhd(262): signal "sp1_time" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 262
+Warning (10492): VHDL Process Statement warning at controller.vhd(263): signal "score_playerB_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 263
+Warning (10492): VHDL Process Statement warning at controller.vhd(266): signal "score_playerA_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 266
+Warning (10492): VHDL Process Statement warning at controller.vhd(266): signal "score_playerB_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 266
+Warning (10492): VHDL Process Statement warning at controller.vhd(266): signal "target_score_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 266
+Warning (10492): VHDL Process Statement warning at controller.vhd(274): signal "sec_done" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 274
+Warning (10492): VHDL Process Statement warning at controller.vhd(282): signal "sec5_done" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 282
+Warning (10492): VHDL Process Statement warning at controller.vhd(286): signal "score_playerA_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 286
+Warning (10492): VHDL Process Statement warning at controller.vhd(286): signal "score_playerB_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 286
+Warning (10492): VHDL Process Statement warning at controller.vhd(289): signal "score_playerB_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 289
+Warning (10492): VHDL Process Statement warning at controller.vhd(289): signal "score_playerA_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 289
+Warning (10492): VHDL Process Statement warning at controller.vhd(292): signal "score_playerA_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 292
+Warning (10492): VHDL Process Statement warning at controller.vhd(292): signal "score_playerB_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 292
+Warning (10492): VHDL Process Statement warning at controller.vhd(298): signal "score_playerA_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 298
+Warning (10492): VHDL Process Statement warning at controller.vhd(301): signal "score_playerB_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 301
+Warning (10492): VHDL Process Statement warning at controller.vhd(304): signal "score_playerA_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 304
+Warning (10492): VHDL Process Statement warning at controller.vhd(305): signal "score_playerB_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 305
+Warning (10492): VHDL Process Statement warning at controller.vhd(310): signal "score_playerA_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 310
+Warning (10492): VHDL Process Statement warning at controller.vhd(311): signal "score_playerB_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 311
+Warning (10492): VHDL Process Statement warning at controller.vhd(317): signal "score_playerB_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 317
+Warning (10492): VHDL Process Statement warning at controller.vhd(318): signal "score_playerA_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 318
+Warning (10492): VHDL Process Statement warning at controller.vhd(323): signal "score_playerB_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 323
+Warning (10492): VHDL Process Statement warning at controller.vhd(324): signal "score_playerA_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 324
+Warning (10631): VHDL Process Statement warning at controller.vhd(184): inferring latch(es) for signal or variable "test_cycles_reg", which holds its previous value in one or more paths through the process File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Warning (10631): VHDL Process Statement warning at controller.vhd(184): inferring latch(es) for signal or variable "score_playerA_reg", which holds its previous value in one or more paths through the process File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Warning (10631): VHDL Process Statement warning at controller.vhd(184): inferring latch(es) for signal or variable "score_playerB_reg", which holds its previous value in one or more paths through the process File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Warning (10631): VHDL Process Statement warning at controller.vhd(184): inferring latch(es) for signal or variable "stimulus_playerA", which holds its previous value in one or more paths through the process File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Warning (10631): VHDL Process Statement warning at controller.vhd(184): inferring latch(es) for signal or variable "stimulus_playerB", which holds its previous value in one or more paths through the process File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Warning (10631): VHDL Process Statement warning at controller.vhd(184): inferring latch(es) for signal or variable "config_enable", which holds its previous value in one or more paths through the process File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Warning (10631): VHDL Process Statement warning at controller.vhd(184): inferring latch(es) for signal or variable "stopwatch_enable", which holds its previous value in one or more paths through the process File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Warning (10631): VHDL Process Statement warning at controller.vhd(184): inferring latch(es) for signal or variable "sec_en", which holds its previous value in one or more paths through the process File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Warning (10631): VHDL Process Statement warning at controller.vhd(184): inferring latch(es) for signal or variable "sec5_en", which holds its previous value in one or more paths through the process File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Warning (10631): VHDL Process Statement warning at controller.vhd(184): inferring latch(es) for signal or variable "next_state", which holds its previous value in one or more paths through the process File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Warning (10631): VHDL Process Statement warning at controller.vhd(184): inferring latch(es) for signal or variable "sp1_time", which holds its previous value in one or more paths through the process File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Warning (10631): VHDL Process Statement warning at controller.vhd(184): inferring latch(es) for signal or variable "sp2_time", which holds its previous value in one or more paths through the process File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Warning (10492): VHDL Process Statement warning at controller.vhd(342): signal "sec_en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 342
+Warning (10492): VHDL Process Statement warning at controller.vhd(343): signal "sec_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 343
+Warning (10492): VHDL Process Statement warning at controller.vhd(344): signal "sec_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 344
+Warning (10631): VHDL Process Statement warning at controller.vhd(337): inferring latch(es) for signal or variable "sec_count", which holds its previous value in one or more paths through the process File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 337
+Warning (10631): VHDL Process Statement warning at controller.vhd(337): inferring latch(es) for signal or variable "sec_done", which holds its previous value in one or more paths through the process File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 337
+Info (10041): Inferred latch for "sec_done" at controller.vhd(337) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 337
+Info (10041): Inferred latch for "sec_count[0]" at controller.vhd(337) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 337
+Info (10041): Inferred latch for "sec_count[1]" at controller.vhd(337) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 337
+Info (10041): Inferred latch for "sp2_time[0]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp2_time[1]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp2_time[2]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp2_time[3]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp2_time[4]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp2_time[5]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp2_time[6]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp2_time[7]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp2_time[8]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp2_time[9]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp2_time[10]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp2_time[11]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp2_time[12]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp2_time[13]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp2_time[14]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp2_time[15]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp2_time[16]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp2_time[17]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp2_time[18]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp2_time[19]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp2_time[20]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp2_time[21]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp2_time[22]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp2_time[23]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp1_time[0]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp1_time[1]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp1_time[2]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp1_time[3]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp1_time[4]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp1_time[5]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp1_time[6]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp1_time[7]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp1_time[8]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp1_time[9]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp1_time[10]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp1_time[11]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp1_time[12]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp1_time[13]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp1_time[14]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp1_time[15]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp1_time[16]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp1_time[17]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp1_time[18]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp1_time[19]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp1_time[20]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp1_time[21]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp1_time[22]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sp1_time[23]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "next_state.PENALTY" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "next_state.SP2_2" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "next_state.SP1_2" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "next_state.WINNER" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "next_state.SEC_DELAY" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "next_state.COMPARE_SCORE" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "next_state.INC_SCORE" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "next_state.POINTS_ASSIGN" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "next_state.STIMULUS" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "next_state.DELAY_TIMER" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "next_state.WAIT_for_START" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "next_state.CONFIG" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "next_state.IDLE" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sec5_en" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "sec_en" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "stopwatch_enable" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "config_enable" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "stimulus_playerB[0]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "stimulus_playerB[1]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "stimulus_playerB[2]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "stimulus_playerB[3]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "stimulus_playerA[0]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "stimulus_playerA[1]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "stimulus_playerA[2]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "stimulus_playerA[3]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "score_playerB_reg[0]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "score_playerB_reg[1]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "score_playerB_reg[2]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "score_playerB_reg[3]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "score_playerB_reg[4]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "score_playerB_reg[5]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "score_playerA_reg[0]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "score_playerA_reg[1]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "score_playerA_reg[2]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "score_playerA_reg[3]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "score_playerA_reg[4]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "score_playerA_reg[5]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "test_cycles_reg[0]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "test_cycles_reg[1]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "test_cycles_reg[2]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "test_cycles_reg[3]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "test_cycles_reg[4]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (10041): Inferred latch for "test_cycles_reg[5]" at controller.vhd(184) File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 184
+Info (12128): Elaborating entity "config_fsm" for hierarchy "controller:uut4|config_fsm:uut1" File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 127
+Info (12128): Elaborating entity "random_delay" for hierarchy "controller:uut4|random_delay:uut2" File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 138
+Info (12128): Elaborating entity "stopwatch_ms" for hierarchy "controller:uut4|stopwatch_ms:spA" File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 147
+Info (12128): Elaborating entity "Bin_to_BCD" for hierarchy "Bin_to_BCD:uut5_target_Score" File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 230
+Info (12128): Elaborating entity "BCD_to_7Segment" for hierarchy "BCD_to_7Segment:uut6_target_scoreTens" File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 237
+Warning (14025): LATCH primitive "controller:uut4|sec_count[1]" is permanently disabled File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 337
+Warning (14025): LATCH primitive "controller:uut4|sec_count[0]" is permanently disabled File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd Line: 337
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDs[0]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 39
+    Warning (13410): Pin "LEDs[1]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 39
+    Warning (13410): Pin "LEDs[2]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 39
+    Warning (13410): Pin "LEDs[3]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 39
+    Warning (13410): Pin "LEDs[4]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 39
+    Warning (13410): Pin "LEDs[5]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 39
+    Warning (13410): Pin "LEDs[6]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 39
+    Warning (13410): Pin "LEDs[7]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 39
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 308
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 308
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 308
+    Warning (13410): Pin "HEX0[6]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 308
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 308
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 308
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 308
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 308
+    Warning (13410): Pin "HEX1[6]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 308
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 308
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 308
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 308
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 308
+    Warning (13410): Pin "HEX2[6]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 308
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 308
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 308
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 308
+    Warning (13410): Pin "HEX3[6]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 308
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 44
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 44
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 44
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 44
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 44
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 44
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 44
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 45
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 45
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 45
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 45
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 45
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 45
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 45
+    Warning (13410): Pin "HEX6[0]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 46
+    Warning (13410): Pin "HEX6[1]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 46
+    Warning (13410): Pin "HEX6[2]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 46
+    Warning (13410): Pin "HEX6[3]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 46
+    Warning (13410): Pin "HEX6[4]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 46
+    Warning (13410): Pin "HEX6[5]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 46
+    Warning (13410): Pin "HEX6[6]" is stuck at VCC File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 46
+    Warning (13410): Pin "HEX7[0]" is stuck at VCC File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 47
+    Warning (13410): Pin "HEX7[1]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 47
+    Warning (13410): Pin "HEX7[2]" is stuck at GND File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 47
+    Warning (13410): Pin "HEX7[3]" is stuck at VCC File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 47
+    Warning (13410): Pin "HEX7[4]" is stuck at VCC File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 47
+    Warning (13410): Pin "HEX7[5]" is stuck at VCC File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 47
+    Warning (13410): Pin "HEX7[6]" is stuck at VCC File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 47
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 122 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEYs[3]" File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 38
+    Warning (15610): No output dependent on input pin "KEYs[1]" File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 38
+    Warning (15610): No output dependent on input pin "KEYs[0]" File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 38
+    Warning (15610): No output dependent on input pin "KEYs[2]" File: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd Line: 38
+Info (21057): Implemented 80 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 64 output pins
+    Info (21061): Implemented 10 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 116 warnings
+    Info: Peak virtual memory: 411 megabytes
+    Info: Processing ended: Sun May 26 16:01:57 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:22
+
+

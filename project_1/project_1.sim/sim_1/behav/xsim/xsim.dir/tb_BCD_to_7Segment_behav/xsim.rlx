@@ -1,0 +1,12 @@
+
+{ 
+    crc :  13857816906881832492  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto e26929bdaa214ab29af9cc05b9e22793 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_BCD_to_7Segment_behav xil_defaultlib.tb_BCD_to_7Segment" , 
+    buildDate : "Jun 10 2021" , 
+    buildTime : "19:45:28" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--no-as-needed  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/tb_BCD_to_7Segment_behav/xsimk\"   \"xsim.dir/tb_BCD_to_7Segment_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/tb_BCD_to_7Segment_behav/obj/xsim_1.lnx64.o\" -L\"/tools/Xilinx/Vivado/2021.1/lib/lnx64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

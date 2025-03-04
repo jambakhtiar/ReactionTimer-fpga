@@ -1,0 +1,33 @@
+Quartus Prime Archive log --	/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/Project_QuartusArchive.qarlog
+
+Archive:	/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/Project_QuartusArchive.qar
+Date:		Tue May 21 13:41:34 2024
+Quartus Prime		23.1std.0 Build 991 11/28/2023 SC Lite Edition
+
+	=========== Files Selected: ===========
+/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/Reaction_Timer_System.qpf
+/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/Reaction_Timer_System.qsf
+/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/BCD_to_7Segment.vhd
+/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Bin_to_BCD.vhd
+/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/Reaction_Timer_System.vhd
+/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/clock_1ms_1hz.vhd
+/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/clock_ms.vhd
+/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/configuration_fsm.vhd
+/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/controller.vhd
+/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/keypressed.vhd
+/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/random_delay.vhd
+/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/sources/stopwatch_ms.vhd
+/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_BCD_to_7Segment.vhd
+/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_Bin_to_BCD.vhd
+/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_clock_1ms_1hz.vhd
+/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_clock_ms.vhd
+/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_config_fsm.vhd
+/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_controller.vhd
+/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_keypressed.vhd
+/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_random_delay.vhd
+/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/code/testBenchs/tb_stopwatch_ms.vhd
+/home/jam/intelFPGA_lite/23.1std/quartus/linux64/assignment_defaults.qdf
+	======= Total: 22 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

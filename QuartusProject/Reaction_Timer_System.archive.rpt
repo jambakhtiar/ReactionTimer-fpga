@@ -1,0 +1,98 @@
+Archive Project report for Reaction_Timer_System
+Tue May 21 13:41:34 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Tue May 21 13:41:34 2024 ;
+; Revision Name          ; Reaction_Timer_System                 ;
+; Top-level Entity Name  ; Reaction_Timer_System                 ;
+; Family                 ; Cyclone IV E                          ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive '/home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/QuartusProject/Project_QuartusArchive.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'Reaction_Timer_System.archive.rpt'
+Info (23030): Evaluation of Tcl script /home/jam/intelFPGA_lite/23.1std/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 571 megabytes
+    Info: Processing ended: Tue May 21 13:41:34 2024
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++--------------------------------------------------------------------------+
+; Files Archived                                                           ;
++--------------------------------------------------------------------------+
+; File Name                                                                ;
++--------------------------------------------------------------------------+
+; /home/jam/intelFPGA_lite/23.1std/quartus/linux64/assignment_defaults.qdf ;
+; code/sources/BCD_to_7Segment.vhd                                         ;
+; code/sources/Bin_to_BCD.vhd                                              ;
+; code/sources/clock_1ms_1hz.vhd                                           ;
+; code/sources/clock_ms.vhd                                                ;
+; code/sources/configuration_fsm.vhd                                       ;
+; code/sources/controller.vhd                                              ;
+; code/sources/keypressed.vhd                                              ;
+; code/sources/random_delay.vhd                                            ;
+; code/sources/Reaction_Timer_System.vhd                                   ;
+; code/sources/stopwatch_ms.vhd                                            ;
+; code/testBenchs/tb_BCD_to_7Segment.vhd                                   ;
+; code/testBenchs/tb_Bin_to_BCD.vhd                                        ;
+; code/testBenchs/tb_clock_1ms_1hz.vhd                                     ;
+; code/testBenchs/tb_clock_ms.vhd                                          ;
+; code/testBenchs/tb_config_fsm.vhd                                        ;
+; code/testBenchs/tb_controller.vhd                                        ;
+; code/testBenchs/tb_keypressed.vhd                                        ;
+; code/testBenchs/tb_random_delay.vhd                                      ;
+; code/testBenchs/tb_stopwatch_ms.vhd                                      ;
+; Reaction_Timer_System.qpf                                                ;
+; Reaction_Timer_System.qsf                                                ;
++--------------------------------------------------------------------------+
+
+

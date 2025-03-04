@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue May 21 13:21:42 2024
+# Process ID: 42399
+# Current directory: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/tb_Bin_to_BCD_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/jam/Documents/1.Freelancer/inProgress/ReactionTimer/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/tb_Bin_to_BCD_behav/webtalk/xsim_webtalk.tcl -notrace

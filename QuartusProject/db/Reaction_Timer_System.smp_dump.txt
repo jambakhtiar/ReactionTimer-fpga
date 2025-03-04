@@ -1,0 +1,64 @@
+
+State Machine - |Reaction_Timer_System|controller:uut4|state_5s
+Name state_5s.STOP_5s state_5s.RUN_5s state_5s.IDLE_5s 
+state_5s.IDLE_5s 0 0 0 
+state_5s.RUN_5s 0 1 1 
+state_5s.STOP_5s 1 0 1 
+
+State Machine - |Reaction_Timer_System|controller:uut4|current_state
+Name current_state.PENALTY current_state.SP2_2 current_state.SP1_2 current_state.WINNER current_state.SEC_DELAY current_state.COMPARE_SCORE current_state.INC_SCORE current_state.POINTS_ASSIGN current_state.STIMULUS current_state.DELAY_TIMER current_state.WAIT_for_START current_state.CONFIG current_state.IDLE 
+current_state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.CONFIG 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.WAIT_for_START 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.DELAY_TIMER 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.STIMULUS 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.POINTS_ASSIGN 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.INC_SCORE 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.COMPARE_SCORE 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.SEC_DELAY 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.WINNER 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.SP1_2 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.SP2_2 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.PENALTY 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |Reaction_Timer_System|controller:uut4|stopwatch_ms:spB|state
+Name state.STOP state.RUN state.IDLE 
+state.IDLE 0 0 0 
+state.RUN 0 1 1 
+state.STOP 1 0 1 
+
+State Machine - |Reaction_Timer_System|controller:uut4|stopwatch_ms:spA|state
+Name state.STOP state.RUN state.IDLE 
+state.IDLE 0 0 0 
+state.RUN 0 1 1 
+state.STOP 1 0 1 
+
+State Machine - |Reaction_Timer_System|controller:uut4|config_fsm:uut1|state
+Name state.CONFIRM state.CONFIG state.IDLE 
+state.IDLE 0 0 0 
+state.CONFIG 0 1 1 
+state.CONFIRM 1 0 1 
+
+State Machine - |Reaction_Timer_System|keypressed:uut3_key3|key_state
+Name key_state.KEY_RELEASED key_state.KEY_PRESSED key_state.KEY_FREE 
+key_state.KEY_FREE 0 0 0 
+key_state.KEY_PRESSED 0 1 1 
+key_state.KEY_RELEASED 1 0 1 
+
+State Machine - |Reaction_Timer_System|keypressed:uut3_key2|key_state
+Name key_state.KEY_RELEASED key_state.KEY_PRESSED key_state.KEY_FREE 
+key_state.KEY_FREE 0 0 0 
+key_state.KEY_PRESSED 0 1 1 
+key_state.KEY_RELEASED 1 0 1 
+
+State Machine - |Reaction_Timer_System|keypressed:uut3_key1|key_state
+Name key_state.KEY_RELEASED key_state.KEY_PRESSED key_state.KEY_FREE 
+key_state.KEY_FREE 0 0 0 
+key_state.KEY_PRESSED 0 1 1 
+key_state.KEY_RELEASED 1 0 1 
+
+State Machine - |Reaction_Timer_System|keypressed:uut3_key0|key_state
+Name key_state.KEY_RELEASED key_state.KEY_PRESSED key_state.KEY_FREE 
+key_state.KEY_FREE 0 0 0 
+key_state.KEY_PRESSED 0 1 1 
+key_state.KEY_RELEASED 1 0 1 
